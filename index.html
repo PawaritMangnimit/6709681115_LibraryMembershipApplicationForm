@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>แบบฟอร์มตัวอย่าง</title>
+    <link rel="stylesheet" href="css.css">
+    <script>
+        function showOtherInput() {
+            var genderSelect = document.getElementById("Gender");
+            var otherInput = document.getElementById("otherGenderInput");
+            if (genderSelect.value === "Other") otherInput.style.display = "inline";
+            else otherInput.style.display = "none";
+        }
+    </script>
+</head>
+<body>
+
+<div class="form-container">
+    <h2>แบบฟอร์มตัวอย่าง</h2>
+    <form>
+        <label for="name">ชื่อ-สกุล (ภาษาไทย) :</label>
+        <input type="text" id="name" name="name" placeholder="กรอกชื่อ-สกุล"> <br>
+        
+        <label for="nameE">ชื่อ-สกุล (ภาษาอังกฤษ) :</label>
+        <input type="text" id="nameE" name="nameE" placeholder="Enter your name"> <br>
+        
+        <label for="id">รหัสนักศึกษา:</label>
+        <input type="text" id="id" name="id" placeholder="กรอกรหัสนักศึกษา"> <br>
+
+        <label for="Gender">เพศ:</label>
+        <div class="gender-container">
+            <select name="Gender" id="Gender" onchange="showOtherInput()">
+                <option value="Male">ชาย</option>
+                <option value="Female">หญิง</option>
+                <option value="Other">อื่นๆ</option>
+            </select>
+            <input type="text" id="otherGenderInput" name="otherGender" placeholder="กรุณาระบุ">
+        </div>
+        <br>
+
+        <label for="faculty">คณะ:</label>
+        <select name="faculty" id="faculty">
+            <option value="law">คณะนิติศาสตร์</option>
+            <option value="commerce">คณะพาณิชยศาสตร์และการบัญชี</option>
+            <option value="politics">คณะรัฐศาสตร์</option>
+            <option value="economics">คณะเศรษฐศาสตร์</option>
+            <option value="socialWelfare">คณะสังคมสงเคราะห์ศาสตร์</option>
+            <option value="sociology">คณะสังคมวิทยาและมานุษยวิทยา</option>
+            <option value="arts">คณะศิลปศาสตร์</option>
+            <option value="journalism">คณะวารสารศาสตร์และสื่อสารมวลชน</option>
+            <option value="science">คณะวิทยาศาสตร์และเทคโนโลยี</option>
+            <option value="engineering">คณะวิศวกรรมศาสตร์</option>
+            <option value="architecture">คณะสถาปัตยกรรมและการผังเมือง</option>
+            <option value="fineArts">คณะศิลปกรรมศาสตร์</option>
+            <option value="medicine">คณะแพทยศาสตร์</option>
+            <option value="alliedHealth">คณะสหเวชศาสตร์</option>
+            <option value="dentistry">คณะทันตแพทยศาสตร์</option>
+            <option value="nursing">คณะพยาบาลศาสตร์</option>
+            <option value="publicHealth">คณะสาธารณสุขศาสตร์</option>
+            <option value="pharmacy">คณะเภสัชศาสตร์</option>
+            <option value="education">คณะวิทยาการเรียนรู้และศึกษาศาสตร์</option>
+        </select>
+        <br><br>
+
+        <label for="email">อีเมล:</label>
+        <input type="email" id="email" name="email" placeholder="กรอกอีเมล" required> <br>
+
+        <input type="submit" value="ยืนยัน">
+    </form>
+</div>
+
+</body>
+</html>

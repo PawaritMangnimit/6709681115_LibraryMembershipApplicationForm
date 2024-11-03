@@ -1,0 +1,71 @@
+.gender-container {
+    display: flex;
+    align-items: center;
+}
+
+#otherGenderInput {
+    display: none;
+    margin-left: 10px;
+}
+
+
+body {
+    background-color: #f1f8ff; 
+    font-family: Arial, sans-serif;
+}
+
+.form-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-container h2 {
+    text-align: center;
+    font-size: 24px;
+    color: #333;
+}
+
+label {
+    font-size: 14px;
+    color: #607d8b;
+    margin-top: 10px;
+    display: block;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="tel"],
+input[type="number"] {
+    padding: 10px;
+    margin: 5px 0 20px 0;
+    border: 1px solid #cfd8dc;
+    border-radius: 6px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+input[type="text"]::placeholder,
+input[type="password"]::placeholder,
+input[type="tel"]::placeholder,
+input[type="number"]::placeholder {
+    color: #1976d2; 
+}
+
+input[type="submit"] {
+    padding: 12px;
+    background-color: #1976d2;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+input[type="submit"]:hover {
+    background-color: #1565c0;
+}
