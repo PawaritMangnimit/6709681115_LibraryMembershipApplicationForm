@@ -17,7 +17,7 @@
 <body>
 
 <div class="form-container">
-    <h2>แบบฟอร์มตัวอย่าง</h2>
+    <h2>การสมัครสมาชิกห้องสมุด</h2>
     <form>
         <label for="name">ชื่อ-สกุล (ภาษาไทย) :</label>
         <input type="text" id="name" name="name" placeholder="กรอกชื่อ-สกุล"> <br>
@@ -25,12 +25,9 @@
         <label for="nameE">ชื่อ-สกุล (ภาษาอังกฤษ) :</label>
         <input type="text" id="nameE" name="nameE" placeholder="Enter your name"> <br>
         
-        <label for="id">รหัสนักศึกษา:</label>
-        <input type="text" id="id" name="id" placeholder="กรอกรหัสนักศึกษา"> <br>
-
         <label for="Gender">เพศ:</label>
         <div class="gender-container">
-            <select name="Gender" id="Gender" onchange="showOtherInput()">
+            <select name="Gender" id="Gender" onchange="showOtherInput()"> 
                 <option value="Male">ชาย</option>
                 <option value="Female">หญิง</option>
                 <option value="Other">อื่นๆ</option>
@@ -38,6 +35,11 @@
             <input type="text" id="otherGenderInput" name="otherGender" placeholder="กรุณาระบุ">
         </div>
         <br>
+
+        <label for="id">รหัสนักศึกษา:</label>
+        <input type="text" id="id" name="id" placeholder="กรอกรหัสนักศึกษา" required> <br>
+
+        
 
         <label for="faculty">คณะ:</label>
         <select name="faculty" id="faculty">
@@ -64,7 +66,38 @@
         <br><br>
 
         <label for="email">อีเมล:</label>
-        <input type="email" id="email" name="email" placeholder="กรอกอีเมล" required> <br>
+        <input type="email" id="email" name="email" placeholder="กรอกอีเมล" required> <br><br>
+        <label for="date">วัน/เดือน/ปี เกิด:</label>
+        <input type="date" id="date" name="date" placeholder="กรอกเดือน/วัน/ปี เกิด" required> <br><br>
+        <label for="bookType">ประเภทของหนังสือที่สนใจ:</label>
+<div class="checkbox-container">
+    <input type="checkbox" id="general" name="bookType" value="General Books">
+    <label for="general">หนังสือทั่วไป (General Books)</label><br>
+
+    <input type="checkbox" id="reference" name="bookType" value="Reference Books">
+    <label for="reference">หนังสืออ้างอิง (Reference Books)</label><br>
+
+    <input type="checkbox" id="textbooks" name="bookType" value="Textbooks">
+    <label for="textbooks">หนังสือเรียน (Textbooks)</label><br>
+
+    <input type="checkbox" id="literature" name="bookType" value="Literature">
+    <label for="literature">วรรณกรรม (Literature)</label><br>
+
+    <input type="checkbox" id="research" name="bookType" value="Research and Theses">
+    <label for="research">งานวิจัยและวิทยานิพนธ์ (Research and Theses)</label><br>
+
+    <input type="checkbox" id="magazines" name="bookType" value="Magazines and Journals">
+    <label for="magazines">นิตยสารและวารสาร (Magazines and Journals)</label><br>
+
+    <input type="checkbox" id="children" name="bookType" value="Children’s Books">
+    <label for="children">หนังสือสำหรับเด็ก (Children’s Books)</label><br>
+
+    <input type="checkbox" id="newspapers" name="bookType" value="Newspapers and Daily Reports">
+    <label for="newspapers">หนังสือพิมพ์และรายงานประจำวัน (Newspapers and Daily Reports)</label><br>
+
+    <input type="checkbox" id="local" name="bookType" value="Local Books">
+    <label for="local">หนังสือท้องถิ่น (Local Books)</label><br>
+</div>
 
         <input type="submit" value="ยืนยัน">
     </form>
